@@ -6,14 +6,16 @@ class Planet {
   float orbitspeed; // Orbit speed
   float orbitDistance;
   color moonColor;
+  color planetColor;
  
   // Each Planet now has a Moon!
   Moon[] moons = new Moon[2];
   
   
-  Planet(float distance_, float diameter_) {
+  Planet(float distance_, float diameter_, color planetColor_) {
     distance = distance_;
     diameter = diameter_;
+    planetColor = planetColor_;
     theta = 0;
     orbitspeed = random(0.01,0.03);
     orbitDistance = random(40, 50); 
@@ -21,7 +23,7 @@ class Planet {
     moonColor = color(random(255), random(255), random(255));
     // create the Moon 24 pixels from the planet with a diameter of 5
    for (int i = 0; i < moons.length; i++ ) {
-    moons[i] = new Moon(orbitDistance, 24, moonColor);
+    moons[i] = new Moon(orbitDistance, 12 + random(0,24), moonColor);
   }
   
   }
@@ -39,7 +41,7 @@ class Planet {
     // translate out distance
     translate(distance,0); 
     stroke(0);
-    fill(0,255,0);
+    fill(planetColor);
     ellipse(0,0,diameter,diameter);
     // The planet is drawn, now draw the moon
     for (int i = 0; i < moons.length; i++ ) {

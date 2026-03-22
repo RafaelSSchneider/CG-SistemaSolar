@@ -1,12 +1,14 @@
 // An array of 4 planet objects
 Planet[] planets = new Planet[3];
+color planetColor;
 
 void setup() {
   size(480, 270);
-
+  
   // The planet objects are initialized using the counter variable
   for (int i = 0; i < planets.length; i++ ) {
-    planets[i] = new Planet(60 + i*36, 24);
+    planetColor = color(random(255), random(255), random(255));
+    planets[i] = new Planet(60 + i*36, 24, planetColor);
   }
 }
 
