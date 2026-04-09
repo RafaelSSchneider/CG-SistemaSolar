@@ -8,6 +8,8 @@ Tarefa: Em duplas, os alunos fazem um mapa das transformações executadas do So
 Produto: Um diagrama simples (papel ou quadro digital) com caixas “Sol”, “Planeta i”, “Lua de i” e setas apontando as transformações.
 Etapa 2 — Explanação do fluxo de atualização
 
+![Fluxo Sistema Solar](./Fluxo%20Sistema%20Solar.png)
+
 Tarefa: Identificar onde theta é incrementado, como orbitspeed influencia o movimento, e porque as velocidades das luas podem ser positivas ou negativas (órbita horária/anti-horária). - RAFAEL
 Produto: 3–5 bullet points que expliquem update() de Planet e Moon.
 
@@ -25,6 +27,8 @@ Planeta com duas luas
 Duplicar a composição de Moon em um dos planetas e fazer cada uma ter orbitspeed e distance diferentes. (Extensão direta do padrão proposto no código original.)
 Parâmetros visuais
 Atribuir cores diferentes aos planetas e tamanhos diferenciados às luas. Manter a coerência com os campos diameter, distance e orbitspeed já presentes nas classes.
+
+
 Etapa 4 — Relatório
 
 Tarefa: Entregar um README (5–10 linhas) respondendo:
