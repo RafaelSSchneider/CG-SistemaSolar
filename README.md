@@ -36,6 +36,6 @@ Onde você aplicou pushMatrix()/popMatrix() e por quê?
 O que mudaria se invertêssemos rotate() e translate() no planeta ou na lua?
 Como garantiu que cada órbita é independente das demais? (composição/atualização separada em update() e uso de matrizes aninhadas)
 
-Sempre antes de alterar a posição de um elemento, como uma lua ou planeta, e  antes de desenhar o sol, para poder alterar a posição que o elemento assumiria ao mudar a posição da matriz de desenho.
-A distância do elemento em comparação com o seu astro primário aumentaria a cada vez que o draw() fosse rodada, enquanto que ele nunca prosseguiria em sua órbita.
+O pushMatrix() foi aplicado sempre antes de alterar a posição de um elemento, como uma lua ou planeta, e  antes de desenhar o sol, para poder alterar a posição que o elemento assumiria ao mudar a posição da matriz de desenho, com o popMatrix() sendo executado ao final da operação para poder restaurar as coordenadas originais da matriz de transformação.
+A distância do elemento em comparação com o seu astro primário aumentaria a cada vez que o draw() fosse rodada, sendo incrementada por sua velocidade de órbita, enquanto que ele nunca prosseguiria em sua órbita.
 Utilizando Programação Orientada a Objetos de maneira que cada elemento se preocupe apenas com seus próprios parâmetros de velocidade e distância de órbita.
